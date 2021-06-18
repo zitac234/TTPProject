@@ -17,7 +17,6 @@ body{
 .right{
       right:0%;
       width: 35%;
-      border-left: 2px solid red;
 }
 .centered {
       position: absolute;

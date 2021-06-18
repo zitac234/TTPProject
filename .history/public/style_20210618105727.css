@@ -8,6 +8,7 @@ body{
       z-index: 1;
       top: 0;
       overflow-x: hidden;
+      border: 1px solid red;
       /* padding-top: 20px; */
 }
 .left{
@@ -17,30 +18,18 @@ body{
 .right{
       right:0%;
       width: 35%;
-      border-left: 2px solid red;
 }
 .centered {
       position: absolute;
       top: 10%;
       left: 15%;
+      /* transform: translate(-50%, -50%); */
+      text-align: center;
 }
 textarea {
       width: 700px;
-      height: 700px;
-      padding: 12px 20px;
-      box-sizing: border-box;
-      border: 2px solid #ccc;
-      border-radius: 4px;
-      background-color: #f8f8f8;
-      resize: none;
+      height: 600px;
 }
-input{
-      margin-top: 45%;
-      width: 300px;  
-      height:25px;
-}
-button{
-      width:100px;
-      height: 30px;
-      margin-left: 10px;
+#link{
+      
 }

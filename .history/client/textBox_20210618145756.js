@@ -15,12 +15,12 @@ export default function textBox(props){
                   <div id = 'paragraph'>Write text or include the link to document</div>
                   <div className = 'split left'>
                         <div  className = 'centered'>
-                              <textarea placeholder = 'Write here' ></textarea>
+                              <textarea placeholder = '' ></textarea>
                         </div>
                   </div>
                   <div className = 'split right'>
                         <div className = 'centered'>
-                              <form >    
+                              <form  >    
                                     <input className="w3-input w3-border" name="last" type="text" placeholder = 'Link'/>    
                                     <button className="w3-btn w3-blue">Submit</button>
                               </form>
