@@ -4,6 +4,6 @@ import ReactDOM from 'react-dom';
 
 ReactDOM.render(
   // <div>Hello, Nneoma!</div>,
-  <TextBox/>, 
+//   <TextB/>, 
   document.getElementById('app') 
 )

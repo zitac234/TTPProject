@@ -21,11 +21,16 @@ export default function textBox(props){
                         rowsMax={50}
                         aria-label="maximum height"
                         placeholder="Maximum 50 rows"
+                        defaultValue="Write text here"
                   />
                   <div className={classes.margin}>
                         <Grid container spacing={1} alignItems="flex-end">
                         <Grid item>
-                              <TextField id="input-with-icon-grid" label="Link here"  />
+                             
+                        </Grid>
+                        <Grid item>
+                        <LinkIcon/>
+                              <TextField id="input-with-icon-grid" label="Link here" />
                         </Grid>
                         </Grid>
                   </div>
