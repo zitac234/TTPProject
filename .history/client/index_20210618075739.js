@@ -5,4 +5,3 @@ import ReactDOM from 'react-dom';
 ReactDOM.render(
   <TextBox/>, 
   document.getElementById('app') 
-)

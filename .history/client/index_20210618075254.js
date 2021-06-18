@@ -1,8 +1,9 @@
 import React from 'react';
-import TextBox from './TextBox'
+import 
 import ReactDOM from 'react-dom';
 
 ReactDOM.render(
-  <TextBox/>, 
+  <div>Hello, Nneoma Vivian Chukwukelu!</div>,
+//   <Table/>, 
   document.getElementById('app') 
 )
