@@ -1,0 +1,32 @@
+body{
+      font-family: 'Courier New', Courier, monospace;
+      background-color: seashell;
+}
+.split{
+      height: 100%;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      overflow-x: hidden;
+      border: 1px solid red;
+      /* padding-top: 20px; */
+}
+.left{
+      left:0;
+      width: 65%;
+}
+.right{
+      right:0%;
+      width: 35%;
+}
+.centered {
+      position: absolute;
+      top: 10%;
+      /* left: 45%; */
+      /* transform: translate(-50%, -50%); */
+      /* text-align: center; */
+}
+textarea {
+      width: 300px;
+      height: 100%;
+}

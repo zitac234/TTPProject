@@ -1,0 +1,29 @@
+body{
+      font-family: 'Courier New', Courier, monospace;
+      background-color: seashell;
+}
+.split{
+      height: 100%;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      overflow-x: hidden;
+      /* padding-top: 20px; */
+}
+.left{
+      left:0;
+      width: 75%;
+      border: 1solid red;
+}
+.right{
+      right:0%;
+      width: 25%;
+      border: 1 solid blue;
+}
+.centered {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      /* transform: translate(-50%, -50%); */
+      text-align: center;
+    }
