@@ -16,11 +16,11 @@ body{
 }
 .left{
       left:0;
-      width: 60%;
+      width: %;
 }
 .right{
       right:0%;
-      width: 40%;
+      width: 35%;
 }
 .centered {
       position: absolute;

@@ -15,13 +15,15 @@ export default function textBox(props){
                               <form >    
                                     <input className="w3-input w3-border" name="last" type="text" placeholder = 'Link'/>    
                                     <button className="w3-btn w3-blue">Submit</button>
-                              </form>                 
-                              <h5>Character Count:</h5>
-                              <h5>Word Count:</h5>
-                              <h5>Sentence Count:</h5>
-                              <h5>Bigram  Count:</h5>
-                              <h5>Most Frequeney Word:</h5>
-                              <h5>Word Result:</h5> {/*word serch result */}
+                              </form>
+                              <div id = 'word'>                      
+                                    <h5>Character Count:</h5>
+                                    <h5>Word Count:</h5>
+                                    <h5>Sentence Count:</h5>
+                                    <h5>Bigram  Count:</h5>
+                                    <h5>Most Frequeney Word:</h5>
+                                    <h5>Word Result:</h5> {/*word serch result */}
+                              </div>
                         </div>
                   </div>
             </div>

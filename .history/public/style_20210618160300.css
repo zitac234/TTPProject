@@ -9,6 +9,7 @@ body{
       top: 0;
       overflow-x: hidden;
       overflow-y: hidden
+      /* padding-top: 20px; */
 }
 #line{
       border-right: 2px solid red;
@@ -16,15 +17,21 @@ body{
 }
 .left{
       left:0;
-      width: 60%;
+      width: 65%;
+      
 }
+/* .line{
+      border-right: 2px solid red;
+} */
 .right{
       right:0%;
-      width: 40%;
+      width: 35%;
+     
 }
 .centered {
       position: absolute;
       top: 5%;
+    
 }
 textarea {
       width: 700px;
@@ -35,6 +42,7 @@ input{
       margin-top: 50%;
       width: 400px;  
       height:25px;
+      right: 10%;
 }
 input, textarea{
       padding: 12px 20px;

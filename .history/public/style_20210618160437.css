@@ -16,11 +16,11 @@ body{
 }
 .left{
       left:0;
-      width: 60%;
+      width: 65%;
 }
 .right{
       right:0%;
-      width: 40%;
+      width: 35%;
 }
 .centered {
       position: absolute;
@@ -35,6 +35,7 @@ input{
       margin-top: 50%;
       width: 400px;  
       height:25px;
+      /* padding-right: 5%; */
 }
 input, textarea{
       padding: 12px 20px;

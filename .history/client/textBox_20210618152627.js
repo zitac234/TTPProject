@@ -1,13 +1,21 @@
 import React from 'react'
+// import { makeStyles } from '@material-ui/core/styles';
+// import TextField from '@material-ui/core/TextField';
 
+// const useStyles = makeStyles((theme) => ({
+//       margin: {
+//         margin: theme.spacing(1),
+//       },
+//  }));
 export default function textBox(props){
+      // const classes = useStyles();
       const {text} = props
       return (
             <div>
-                  <h2 id = 'paragraph'>Write text or include the link to document</h2>
+                  <p id = 'paragraph'>Write text or include the link to document</p>
                   <div className = 'split left'>
                         <div  className = 'centered'>
-                        <p  id = 'line'><textarea placeholder = 'Write here' ></textarea></p>
+                              <textarea placeholder = 'Write here' ></textarea>
                         </div>
                   </div>
                   <div className = 'split right'>
@@ -15,13 +23,7 @@ export default function textBox(props){
                               <form >    
                                     <input className="w3-input w3-border" name="last" type="text" placeholder = 'Link'/>    
                                     <button className="w3-btn w3-blue">Submit</button>
-                              </form>                 
-                              <h5>Character Count:</h5>
-                              <h5>Word Count:</h5>
-                              <h5>Sentence Count:</h5>
-                              <h5>Bigram  Count:</h5>
-                              <h5>Most Frequeney Word:</h5>
-                              <h5>Word Result:</h5> {/*word serch result */}
+                              </form>
                         </div>
                   </div>
             </div>
