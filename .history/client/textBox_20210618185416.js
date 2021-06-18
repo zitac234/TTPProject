@@ -7,7 +7,7 @@ export default function textBox(props){
                   <h2 id = 'paragraph'>Write text or include the link to document</h2>
                   <div className = 'split left'>
                         <div  className = 'centered'>
-                        <p  id = 'line'><textarea placeholder = 'Write here, max character 2500' maxLength='2500'  id = 'textarea' onChange={handleChange}  name= 'text'></textarea></p>
+                        <p  id = 'line'><textarea placeholder = 'Write here max character 2500' maxLength='2500'  id = 'textarea' onChange={handleChange}  name= 'text'></textarea></p>
                         </div>
                   </div>
                   <div className = 'split right'>
