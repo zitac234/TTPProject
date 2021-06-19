@@ -2,22 +2,20 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./client/TextBox.js":
-/*!***************************!*\
-  !*** ./client/TextBox.js ***!
-  \***************************/
+/***/ "./client/Form.js":
+/*!************************!*\
+  !*** ./client/Form.js ***!
+  \************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ textBox)
+/* harmony export */   "default": () => (/* binding */ Form)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
-function textBox(props) {
-  var name = props.name,
-      handleChange = props.handleChange,
-      handleSubmit = props.handleSubmit;
+function Form(props) {
+  // const {name, handleChange, handleSubmit} = props
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
     id: "paragraph"
   }, "Write text or include the link to document"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -28,7 +26,7 @@ function textBox(props) {
     id: "line"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("textarea", {
     name: "text",
-    onChange: handleChange,
+    onChange: props.handleChange,
     id: "textarea",
     placeholder: "max character 2500",
     maxLength: "2500"
@@ -37,7 +35,7 @@ function textBox(props) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "centered"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("form", {
-    onSubmit: handleSubmit
+    onSubmit: props.handleSubmit
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
     name: "link",
     type: "text",
@@ -29925,7 +29923,7 @@ var __webpack_exports__ = {};
   \*************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _TextBox__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./TextBox */ "./client/TextBox.js");
+/* harmony import */ var _Form__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Form */ "./client/Form.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 
 
@@ -29933,7 +29931,7 @@ __webpack_require__.r(__webpack_exports__);
 react_dom__WEBPACK_IMPORTED_MODULE_2__.render(
 /*#__PURE__*/
 // <div>Hello, Nneoma!</div>,
-react__WEBPACK_IMPORTED_MODULE_0__.createElement(_TextBox__WEBPACK_IMPORTED_MODULE_1__.default, null), document.getElementById('app'));
+react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Form__WEBPACK_IMPORTED_MODULE_1__.default, null), document.getElementById('app'));
 })();
 
 /******/ })()
