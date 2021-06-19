@@ -14,7 +14,7 @@ export default function textBox(props){
                         <div className = 'centered'>
                               <form onSubmit={handleSubmit} >    
                                     <input  name="link" type="text" placeholder = 'Link'/>    
-                                    <button  type='submit' disabled={!props.link}>Submit</button>
+                                    <button  type='submit' disabled={}>Submit</button>
                               </form>                 
                               <h5>Character Count:</h5>
                               <h5>Word Count:</h5>
