@@ -41,12 +41,10 @@ import Form  from './Form'
 export default function CreateForm (props) {
       const [text, setText] = useState('')
       const [search, setSearch] = useState('')
-      let numberOfSentence = 0
+      
       function handleChange(evt){
             if(evt.target.name === 'text') setText(evt.target.value)
             else setSearch(evt.target.value)
-            // numberOfSentence = countSentences(text)
-            console.log('text:', text, 'numberOfSentence', numberOfSentence)
       }
       function handleSubmit(evt){
             evt.preventDefault()
@@ -58,7 +56,7 @@ export default function CreateForm (props) {
                   search={search}
                   handleChange={handleChange}
                   handleSubmit={handleSubmit}
-                  numberOfSentence = {countSentences }
+                  // numberOfSentence = {this.countSentences}
                   />
       )
 }

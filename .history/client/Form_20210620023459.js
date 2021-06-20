@@ -18,7 +18,7 @@ export default function Form(props){
                               </form>                 
                               <h5>Character Count:</h5>
                               <h5>Word Count:</h5>
-                              <h5>Sentence Count:{props.numberOfSentence(props.text)}</h5>
+                              <h5>Sentence Count:{props.numberOfSentence()}</h5>
                               <h5>Bigram  Count:</h5>
                               <h5>Most Frequeney Word:</h5>
                               <h5>Word Result:</h5> {/*word serch result */}

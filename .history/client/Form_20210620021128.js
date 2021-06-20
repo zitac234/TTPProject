@@ -1,7 +1,6 @@
 import React from 'react'
 
 export default function Form(props){
-      console.log('props', props)
       return (
             <div>
                   <h2 id = 'paragraph'>Write text or include the link to document</h2>
@@ -12,13 +11,13 @@ export default function Form(props){
                   </div>
                   <div className = 'split right'>
                         <div className = 'centered'>
-                              <form  onSubmit={props.handleSubmit} >   
+                              <form  >    {/* onSubmit={props.handleSubmit} */}
                                     <input  name="search"  onChange={props.handleChange} type="text" placeholder = 'Search...'/>    
                                     <button  type='submit' disabled={!props.search}>Search</button>
                               </form>                 
                               <h5>Character Count:</h5>
                               <h5>Word Count:</h5>
-                              <h5>Sentence Count:{props.numberOfSentence(props.text)}</h5>
+                              {/* <h5>Sentence Count:</h5> */}
                               <h5>Bigram  Count:</h5>
                               <h5>Most Frequeney Word:</h5>
                               <h5>Word Result:</h5> {/*word serch result */}

@@ -45,8 +45,8 @@ export default function CreateForm (props) {
       function handleChange(evt){
             if(evt.target.name === 'text') setText(evt.target.value)
             else setSearch(evt.target.value)
-            // numberOfSentence = countSentences(text)
-            console.log('text:', text, 'numberOfSentence', numberOfSentence)
+            numberOfSentence = countSentences(text)
+            console.log('')
       }
       function handleSubmit(evt){
             evt.preventDefault()
@@ -58,7 +58,7 @@ export default function CreateForm (props) {
                   search={search}
                   handleChange={handleChange}
                   handleSubmit={handleSubmit}
-                  numberOfSentence = {countSentences }
+                  numberOfSentence = {numberOfSentence}
                   />
       )
 }
