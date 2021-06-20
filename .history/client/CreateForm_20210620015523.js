@@ -32,7 +32,7 @@ export default class CreateForm extends React.Component{
                   {...this.state } 
                   handleChange={this.handleChange} 
                   handleSubmit={this.handleSubmit} 
-                  numberOfSentence = {this.countSentences}
+                  numberOfSentence = {this.countSentence}
                   />
             )
       }

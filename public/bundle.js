@@ -384,18 +384,13 @@ var CreateForm = /*#__PURE__*/function (_React$Component) {
       this.setState((0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_2__.default)({}, evt.target.name, evt.target.value));
     }
   }, {
-    key: "countSentence",
-    value: function countSentence() {
+    key: "countSentences",
+    value: function countSentences() {
       var regex = /[!\.\?]/;
       var textSplit = this.state.text.split(regex);
-      console.log('textSplit', textSplit);
       var sentenceArray = textSplit.filter(function (sentence) {
         return sentence && sentence.trim();
       });
-      sentenceArray.forEach(function (s) {
-        return console.log('word length', s.length, 's', s);
-      });
-      console.log('sentenceArray', sentenceArray);
       return sentenceArray.length;
     }
   }, {
@@ -428,7 +423,7 @@ var CreateForm = /*#__PURE__*/function (_React$Component) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10__.createElement(_Form__WEBPACK_IMPORTED_MODULE_11__.default, (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__.default)({}, this.state, {
         handleChange: this.handleChange,
         handleSubmit: this.handleSubmit,
-        numberOfSentence: this.countSentence
+        numberOfSentence: this.countSentences
       }));
     }
   }]);

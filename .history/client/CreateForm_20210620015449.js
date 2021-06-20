@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Form  from './Form'
 
 export default class CreateForm extends React.Component{
@@ -17,9 +17,10 @@ export default class CreateForm extends React.Component{
                   [evt.target.name]: evt.target.value
             })
       }
-      countSentences(){
+      countSentence(){
             let regex = /[!\.\?]/
             let textSplit = this.state.text.split(regex)
+            console.log('textSplit', textSplit)
             let sentenceArray = textSplit.filter(sentence => sentence && sentence.trim())
             return sentenceArray.length   
       }
@@ -32,7 +33,7 @@ export default class CreateForm extends React.Component{
                   {...this.state } 
                   handleChange={this.handleChange} 
                   handleSubmit={this.handleSubmit} 
-                  numberOfSentence = {this.countSentences}
+                  numberOfSentence = {this.countSentence}
                   />
             )
       }
