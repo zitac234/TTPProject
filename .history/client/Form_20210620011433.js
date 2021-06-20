@@ -1,7 +1,6 @@
 import React from 'react'
 
 export default function Form(props){
-      
       return (
             <div>
                   <h2 id = 'paragraph'>Write text or include the link to document</h2>
