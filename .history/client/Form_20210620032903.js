@@ -21,7 +21,7 @@ export default function Form(props){
                               <h3>Sentence Count:{props.numberOfSentence(props.text)}</h3>
                               <h3>Bigram  Count:</h3>
                               <h3>Most Frequeney Word:</h3>
-                              <h3>Word Result:</h3> {/*word serch result */}
+                              <h3>Word Result:</h5> {/*word serch result */}
                         </div>
                   </div>
             </div>

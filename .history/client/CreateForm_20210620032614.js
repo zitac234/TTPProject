@@ -57,7 +57,7 @@ export default function CreateForm (props) {
                   handleChange={handleChange}
                   handleSubmit={handleSubmit}
                   numberOfSentence = {countSentences }
-                  numberOfWord = {countWords}
+                  numberOfWord = {}
                   />
       )
 }
