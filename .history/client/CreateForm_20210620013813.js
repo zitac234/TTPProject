@@ -16,14 +16,14 @@ export default class CreateForm extends React.Component{
             this.setState({
                   [evt.target.name]: evt.target.value
             })
+            let s = countSentence()
+            console.log('state', this.state, 's', s)
       }
       countSentence(){
             let regex = /[!\.\?]/
             let textSplit = this.state.text.split(regex)
-            console.log('textSplit', textSplit)
-            let sentenceArray = textSplit.filter(sentence => sentence && sentence.trim())
-            sentenceArray.forEach(s => console.log('word length', s.length, 's', s))
-            console.log('sentenceArray', sentenceArray)
+            let sentenceArray = textSplit.filter(sentence => sentence.length > 0)
+            console.log('sentenceArray', sentenceArray, '')
             return sentenceArray.length   
       }
       async handleSubmit (evt){

@@ -20,9 +20,8 @@ export default class CreateForm extends React.Component{
       countSentence(){
             let regex = /[!\.\?]/
             let textSplit = this.state.text.split(regex)
-            console.log('textSplit', textSplit)
-            let sentenceArray = textSplit.filter(sentence => sentence && sentence.trim())
-            sentenceArray.forEach(s => console.log('word length', s.length, 's', s))
+            let sentenceArray = textSplit.filter(sentence => sentence.length > 0)
+            sentenceArray.forEach
             console.log('sentenceArray', sentenceArray)
             return sentenceArray.length   
       }

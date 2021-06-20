@@ -387,30 +387,33 @@ var CreateForm = /*#__PURE__*/function (_React$Component) {
     key: "countSentence",
     value: function countSentence() {
       var regex = /[!\.\?]/;
-      var sentences = this.state.text.split(regex);
-      return sentences.filter(function (sentence) {
-        return sentence.length > 0;
+      var textSplit = this.state.text.split(regex);
+      console.log('textSplit', textSplit);
+      var sentenceArray = textSplit.filter(function (sentence) {
+        return sentence && sentence.trim();
       });
+      sentenceArray.forEach(function (s) {
+        return console.log('word length', s.length, 's', s);
+      });
+      console.log('sentenceArray', sentenceArray);
+      return sentenceArray.length;
     }
   }, {
     key: "handleSubmit",
     value: function () {
       var _handleSubmit = (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__.default)( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_9___default().mark(function _callee(evt) {
-        var s;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_9___default().wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
                 evt.preventDefault();
-                s = this.countSentence();
-                console.log('s', s); // console.log('state from submit',)
 
-              case 3:
+              case 1:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, this);
+        }, _callee);
       }));
 
       function handleSubmit(_x) {
@@ -422,11 +425,10 @@ var CreateForm = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      console.log('state', this.state);
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10__.createElement(_Form__WEBPACK_IMPORTED_MODULE_11__.default, (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__.default)({}, this.state, {
         handleChange: this.handleChange,
-        handleSubmit: this.handleSubmit // countSentence={this.countSentence}
-
+        handleSubmit: this.handleSubmit,
+        numberOfSentence: this.countSentence
       }));
     }
   }]);
@@ -480,7 +482,7 @@ function Form(props) {
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
     type: "submit",
     disabled: !props.search
-  }, "Search")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h5", null, "Character Count:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h5", null, "Word Count:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h5", null, "Sentence Count:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h5", null, "Bigram  Count:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h5", null, "Most Frequeney Word:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h5", null, "Word Result:"), " ")));
+  }, "Search")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h5", null, "Character Count:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h5", null, "Word Count:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h5", null, "Sentence Count:", props.numberOfSentence()), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h5", null, "Bigram  Count:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h5", null, "Most Frequeney Word:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h5", null, "Word Result:"), " ")));
 }
 
 /***/ }),

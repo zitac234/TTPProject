@@ -21,7 +21,7 @@ export default class CreateForm extends React.Component{
             let regex = /[!\.\?]/
             let textSplit = this.state.text.split(regex)
             console.log('textSplit', textSplit)
-            let sentenceArray = textSplit.filter(sentence => sentence && sentence.trim())
+            let sentenceArray = textSplit.filter(sentence => sentence && !myString.trim())
             sentenceArray.forEach(s => console.log('word length', s.length, 's', s))
             console.log('sentenceArray', sentenceArray)
             return sentenceArray.length   
