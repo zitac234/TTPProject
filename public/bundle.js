@@ -209,7 +209,8 @@ function CreateForm(props) {
       setSearch = _useState4[1];
 
   var numberOfSentence = 0,
-      numberOfWord = 0;
+      numberOfWord = 0,
+      numberOfCharacter = 0;
 
   function handleChange(evt) {
     if (evt.target.name === 'text') setText(evt.target.value);else setSearch(evt.target.value);
@@ -226,7 +227,8 @@ function CreateForm(props) {
     handleChange: handleChange,
     handleSubmit: handleSubmit,
     numberOfSentence: countSentences,
-    numberOfWord: countWords
+    numberOfWord: countWords,
+    numberOfCharacter: countCharacters
   });
 }
 
@@ -245,6 +247,14 @@ var countWords = function countWords(str) {
     return word && word.trim();
   });
   return wordArray.length;
+};
+
+var countCharacters = function countCharacters(str) {
+  var textSplit = str.split('');
+  var characterArray = textSplit.filter(function (character) {
+    return character;
+  });
+  return characterArray.length;
 };
 
 /***/ }),
@@ -291,7 +301,7 @@ function Form(props) {
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
     type: "submit",
     disabled: !props.search
-  }, "Search")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Character Count:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Word Count:", props.numberOfWord(props.text)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Sentence Count:", props.numberOfSentence(props.text)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Bigram  Count:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Most Frequeney Word:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Word Result:"), " ")));
+  }, "Search")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Number of Characters:", props.numberOfCharacter(props.text)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Number of Words:", props.numberOfWord(props.text)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Number of Sentences:", props.numberOfSentence(props.text)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Bigram  Count:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Most Frequeney Word:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Word Result:"), " ")));
 }
 
 /***/ }),

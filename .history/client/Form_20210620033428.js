@@ -16,9 +16,9 @@ export default function Form(props){
                                     <input  name="search"  onChange={props.handleChange} type="text" placeholder = 'Search...'/>    
                                     <button  type='submit' disabled={!props.search}>Search</button>
                               </form>                 
-                              <h3>Number of Characters:{props.numberOfCharacter(props.text)}</h3>
-                              <h3>Number of Words:{props.numberOfWord(props.text)}</h3>
-                              <h3>Number of Sentences:{props.numberOfSentence(props.text)}</h3>
+                              <h3>Number od:{props.numberOfCharacter(props.text)}</h3>
+                              <h3>Word Count:{props.numberOfWord(props.text)}</h3>
+                              <h3>Sentence Count:{props.numberOfSentence(props.text)}</h3>
                               <h3>Bigram  Count:</h3>
                               <h3>Most Frequeney Word:</h3>
                               <h3>Word Result:</h3> {/*word serch result */}

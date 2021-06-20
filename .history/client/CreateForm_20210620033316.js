@@ -58,7 +58,6 @@ export default function CreateForm (props) {
                   handleSubmit={handleSubmit}
                   numberOfSentence = {countSentences }
                   numberOfWord = {countWords}
-                  numberOfCharacter = {countCharacters}
                   />
       )
 }
