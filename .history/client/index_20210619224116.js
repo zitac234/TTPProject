@@ -4,7 +4,7 @@ import CreateForm from './CreateForm'
 import ReactDOM from 'react-dom';
 
 ReactDOM.render(
-  // <Form/>, 
-  <CreateForm/>,
+  <Form/>, 
+  // <CreateForm/>,
   document.getElementById('app') 
 )

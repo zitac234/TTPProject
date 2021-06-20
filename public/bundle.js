@@ -354,7 +354,6 @@ function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflec
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
- // import axios from 'axios'
 
 
 
@@ -392,14 +391,14 @@ var CreateForm = /*#__PURE__*/function (_React$Component) {
             switch (_context.prev = _context.next) {
               case 0:
                 evt.preventDefault();
-                console.log('search', this.state.search);
+                console.log('state from submit');
 
               case 2:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, this);
+        }, _callee);
       }));
 
       function handleSubmit(_x) {
@@ -411,7 +410,7 @@ var CreateForm = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      // console.log('search', this.state.search)
+      console.log('state', this.state);
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10__.createElement(_Form__WEBPACK_IMPORTED_MODULE_11__.default, (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__.default)({}, this.state, {
         handleChange: this.handleChange,
         handleSubmit: this.handleSubmit
@@ -31128,16 +31127,17 @@ var __webpack_exports__ = {};
   \*************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _CreateForm__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CreateForm */ "./client/CreateForm.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
- // import Form from './Form'
+/* harmony import */ var _Form__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Form */ "./client/Form.js");
+/* harmony import */ var _CreateForm__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./CreateForm */ "./client/CreateForm.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 
 
 
-react_dom__WEBPACK_IMPORTED_MODULE_2__.render(
+
+react_dom__WEBPACK_IMPORTED_MODULE_3__.render(
 /*#__PURE__*/
 // <Form/>, 
-react__WEBPACK_IMPORTED_MODULE_0__.createElement(_CreateForm__WEBPACK_IMPORTED_MODULE_1__.default, null), document.getElementById('app'));
+react__WEBPACK_IMPORTED_MODULE_0__.createElement(_CreateForm__WEBPACK_IMPORTED_MODULE_2__.default, null), document.getElementById('app'));
 })();
 
 /******/ })()

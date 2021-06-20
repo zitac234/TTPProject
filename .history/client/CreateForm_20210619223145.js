@@ -18,7 +18,6 @@ export default class CreateForm extends React.Component{
       }
       async handleSubmit (evt){
             evt.preventDefault()
-            console.log('state from submit',)
       }
       render(){
             console.log('state', this.state)

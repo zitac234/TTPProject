@@ -1,0 +1,4 @@
+
+const Sentence = (props) => {
+
+}

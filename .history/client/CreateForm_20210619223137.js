@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+// import axios from 'axios'
 import Form  from './Form'
 
 export default class CreateForm extends React.Component{
@@ -18,7 +19,6 @@ export default class CreateForm extends React.Component{
       }
       async handleSubmit (evt){
             evt.preventDefault()
-            console.log('state from submit',)
       }
       render(){
             console.log('state', this.state)

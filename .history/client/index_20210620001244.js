@@ -5,6 +5,6 @@ import ReactDOM from 'react-dom';
 
 ReactDOM.render(
   // <Form/>, 
-  <CreateForm/>,
+  <CreateForm
   document.getElementById('app') 
 )

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+// import axios from 'axios'
 import Form  from './Form'
 
 export default class CreateForm extends React.Component{
@@ -18,10 +19,9 @@ export default class CreateForm extends React.Component{
       }
       async handleSubmit (evt){
             evt.preventDefault()
-            console.log('state from submit',)
+            console.log('search', this.state.search)
       }
       render(){
-            console.log('state', this.state)
             return (
                   <Form {...this.state } handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>
             )
