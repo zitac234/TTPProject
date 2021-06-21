@@ -177,13 +177,21 @@ function CreateForm(props) {
 
   function handleChange(evt) {
     if (evt.target.name === 'text') setText(evt.target.value);else setSearch(evt.target.value);
-    console.log('text:', text.split(' '));
   }
 
   function handleSubmit(evt) {
     evt.preventDefault();
   }
 
+  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
+    document.getElementById('btn').addEventListener('click', function () {
+      var SearchArray = counts(text, ' ')[1].filter(function (word) {
+        return word === search;
+      });
+      var searchWord = SearchArray ? "There are ".concat(SearchArray.length, " ").concat(search, ".") : "There is no ".concat(search, ".");
+      document.getElementById('result').innerHTML = searchWord;
+    });
+  });
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Form__WEBPACK_IMPORTED_MODULE_2__.default, {
     text: text,
     search: search,
@@ -199,7 +207,7 @@ var counts = function counts(str, demilter) {
   var strArray = textSplit.filter(function (s) {
     return s && s.trim();
   });
-  return strArray.length;
+  return [strArray.length, strArray];
 };
 
 var countCharacters = function countCharacters(str) {
@@ -225,9 +233,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
 function Form(props) {
-  var numberOfSentence = props.counted(props.text, /[!\.\?]/);
-  var numberOfWord = props.counted(props.text, ' ');
-  var numberOfParagraph = props.counted(props.text, /\r?\n/);
+  var numberOfSentence = props.counted(props.text, /[!\.\?]/) || 0;
+  var numberOfWord = props.counted(props.text, ' ') || 0;
+  var numberOfParagraph = props.counted(props.text, /\r?\n/) || 0;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
     id: "paragraph"
   }, "Write text or include the link to document"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -254,9 +262,12 @@ function Form(props) {
     type: "text",
     placeholder: "Search..."
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    id: "btn",
     type: "submit",
     disabled: !props.search
-  }, "Search")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Number of Characters:", props.numberOfCharacter(props.text)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Number of Words:", numberOfWord), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Number of Sentences:", numberOfSentence), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Number of Paragraphs:", numberOfParagraph), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Bigram  Count:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Most Frequeney Word:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Word Result:"), " ")));
+  }, "Search")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", {
+    id: "result"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Number of Characters:", props.numberOfCharacter(props.text)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Number of Words:", numberOfWord[0]), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Number of Sentences:", numberOfSentence[0]), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Number of Paragraphs:", numberOfParagraph[0]), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Bigram  Count:"))));
 }
 
 /***/ }),
