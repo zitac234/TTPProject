@@ -173,7 +173,8 @@ function CreateForm(props) {
       setSearch = _useState4[1];
 
   var counted = 0,
-      numberOfCharacter = 0;
+      numberOfCharacter = 0,
+      numberOfBigram = 0;
 
   function handleChange(evt) {
     if (evt.target.name === 'text') setText(evt.target.value);else setSearch(evt.target.value);
@@ -194,7 +195,8 @@ function CreateForm(props) {
     handleChange: handleChange,
     handleSubmit: handleSubmit,
     numberOfCharacter: countCharacters,
-    counted: counts
+    counted: counts,
+    numberOfBigram: countBigrams
   });
 }
 
@@ -215,15 +217,36 @@ var countCharacters = function countCharacters(str) {
 };
 
 var searchWord = function searchWord(text, search) {
-  if (search) {
-    var SearchArray = counts(text, ' ')[1].filter(function (word) {
-      return word === search;
-    });
+  var SearchArray = counts(text, ' ')[1].filter(function (word) {
+    return word === search;
+  });
+  var searchWord = SearchArray.length ? "There are ".concat(SearchArray.length, " ").concat(search, ".") : "There is no ".concat(search, ".");
+  document.getElementById('result').innerHTML = searchWord;
+};
 
-    var _searchWord = SearchArray ? "There are ".concat(SearchArray.length, " ").concat(search, ".") : "There is no ".concat(search, ".");
+var countBigrams = function countBigrams(str) {
+  var regex = /\?|\.|!|,|:|;|[0-9]|/g;
+  var newStr = str.replace(regex, "");
+  var wordsArray = counts(newStr, ' ')[1];
+  var bigramArray = [];
+  var bigramObj = {};
 
-    document.getElementById('result').innerHTML = _searchWord;
+  for (var k = 0; k < wordsArray.length - 2; k++) {
+    var _ref = [wordsArray[k], wordsArray[k + 1]],
+        currentWord = _ref[0],
+        nextWord = _ref[1];
+    var bigram = "".concat(currentWord, " ").concat(nextWord);
+    bigramArray.push(bigram);
   }
+
+  bigramArray.forEach(function (b) {
+    return bigramObj[b] = (bigramObj[b] || 0) + 1;
+  });
+  var values = Object.values(bigramObj);
+  var result = values.reduce(function (a, c) {
+    return a + c - 1;
+  }, 0);
+  return result;
 };
 
 /***/ }),
@@ -275,7 +298,7 @@ function Form(props) {
     disabled: !props.search
   }, "Search")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", {
     id: "result"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Number of Characters:", props.numberOfCharacter(props.text)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Number of Words:", numberOfWord[0]), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Number of Sentences:", numberOfSentence[0]), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Number of Paragraphs:", numberOfParagraph[0]), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Bigram  Count:"))));
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Number of Characters:", props.numberOfCharacter(props.text)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Number of Words:", numberOfWord[0]), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Number of Sentences:", numberOfSentence[0]), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Number of Paragraphs:", numberOfParagraph[0]), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Number of Bigram:", props.numberOfBigram(props.text)))));
 }
 
 /***/ }),
