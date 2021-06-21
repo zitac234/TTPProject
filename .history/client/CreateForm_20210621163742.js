@@ -13,9 +13,7 @@ export default function CreateForm (props) {
             evt.preventDefault()
       }
       useEffect(()=>{
-            document.getElementById('btn').addEventListener('click', ()=>{
-                  searchWord(text, search)
-            }, false)
+            document.getElementById('btn').addEventListener('click', )
       })
       return(
             <Form 

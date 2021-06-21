@@ -1,7 +1,7 @@
 body{
       font-family: 'Courier New', Courier, monospace;
       background-color: rgb(242, 210, 215);
-
+      color:black;
 }
 .split{
       height: 100%;
@@ -47,7 +47,6 @@ input, textarea{
 }
 button{
       color:black;
-      background-color: rgb(247, 245, 236);
       width:75px;
       height: 30px;
       margin-left: 10px;

@@ -13,9 +13,7 @@ export default function CreateForm (props) {
             evt.preventDefault()
       }
       useEffect(()=>{
-            document.getElementById('btn').addEventListener('click', ()=>{
-                  searchWord(text, search)
-            }, false)
+            document.getElementById('btn').addEventListener('click', searchWord(text, search))
       })
       return(
             <Form 
@@ -45,4 +43,5 @@ const searchWord = (text, search)=>{
             let searchWord = (SearchArray)? `There are ${SearchArray.length} ${search}.`:`There is no ${search}.`
             document.getElementById('result').innerHTML = searchWord
       }
+
 }

@@ -185,12 +185,8 @@ function CreateForm(props) {
 
   (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
     document.getElementById('btn').addEventListener('click', function () {
-      var SearchArray = counts(text, ' ')[1].filter(function (word) {
-        return word === search;
-      });
-      var searchWord = SearchArray ? "There are ".concat(SearchArray.length, " ").concat(search, ".") : "There is no ".concat(search, ".");
-      document.getElementById('result').innerHTML = searchWord;
-    });
+      searchWord(text, search);
+    }, false);
   });
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Form__WEBPACK_IMPORTED_MODULE_2__.default, {
     text: text,
@@ -216,6 +212,18 @@ var countCharacters = function countCharacters(str) {
     return character;
   });
   return characterArray.length;
+};
+
+var searchWord = function searchWord(text, search) {
+  if (search) {
+    var SearchArray = counts(text, ' ')[1].filter(function (word) {
+      return word === search;
+    });
+
+    var _searchWord = SearchArray ? "There are ".concat(SearchArray.length, " ").concat(search, ".") : "There is no ".concat(search, ".");
+
+    document.getElementById('result').innerHTML = _searchWord;
+  }
 };
 
 /***/ }),
@@ -30149,14 +30157,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _CreateForm__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CreateForm */ "./client/CreateForm.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
- // import Form from './Form'
 
 
 
-react_dom__WEBPACK_IMPORTED_MODULE_2__.render(
-/*#__PURE__*/
-// <Form/>, 
-react__WEBPACK_IMPORTED_MODULE_0__.createElement(_CreateForm__WEBPACK_IMPORTED_MODULE_1__.default, null), document.getElementById('app'));
+react_dom__WEBPACK_IMPORTED_MODULE_2__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_CreateForm__WEBPACK_IMPORTED_MODULE_1__.default, null), document.getElementById('app'));
 })();
 
 /******/ })()

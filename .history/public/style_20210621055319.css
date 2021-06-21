@@ -1,7 +1,6 @@
 body{
       font-family: 'Courier New', Courier, monospace;
-      background-color: rgb(242, 210, 215);
-
+      background-color: pink;
 }
 .split{
       height: 100%;
@@ -12,7 +11,7 @@ body{
       overflow-y: hidden
 }
 #line{
-      border-right: 2px solid black;
+      border-right: 2px solid pink;
       padding: 75px;
 }
 .left{
@@ -46,8 +45,6 @@ input, textarea{
       resize: none;
 }
 button{
-      color:black;
-      background-color: rgb(247, 245, 236);
       width:75px;
       height: 30px;
       margin-left: 10px;
