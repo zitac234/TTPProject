@@ -1,8 +1,7 @@
 <h2>#2. Word Count Challenge</h2>
 <img src="/public/images/website.png "alt="website image"  width="750vw" height="250vh"/>
----
+
 ## Table of Contents
-* [Table of Contents](#table-of-contents)
 * [Introduction](#introduction)
 * [Technologies](#technologies)
 * [Setup](#setup)
