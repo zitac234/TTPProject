@@ -1,5 +1,5 @@
 <h2>#2. Word Count Challenge</h2>
-<div item-align="center"><img src="/public/images/website.png "alt="website image"  width="750vw" height="300vh"/></div>
+<img src="/public/images/website.png "alt="website image"  width="750vw" height="300vh" display="block" margin-left="auto" margin-right="auto"/>
 
 
 <p align="center">A website that mimics the count word function found in websites like google docs. This website was built using Javascript, React,HTML, CSS and Express.</p>
