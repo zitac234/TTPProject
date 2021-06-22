@@ -244,7 +244,8 @@ var countBigrams = function countBigrams(str) {
   });
   var values = Object.values(bigramObj);
   var result = values.reduce(function (a, c) {
-    return a + c - 1;
+    if (c > 1) a++;
+    return a;
   }, 0);
   return result;
 };
