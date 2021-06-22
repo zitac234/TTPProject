@@ -12,6 +12,7 @@
 * [Contact](#contact)
 
 ## Introduction
-<p>Hello</p>
+<p>This website that mimics the count word function found in websites like google docs. As a user types in textarea, number of characters, words, sentences, paragraphs and bigrams are shown on the right. Also a user can search if a particular word is in use and its frequency. This website is built using React,HTML, CSS for Frontend, Express.js for Backend and Javascript for language.
+
 
 
