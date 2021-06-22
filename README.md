@@ -35,7 +35,7 @@ To run this project, create databases tamagenki and tamagenki-test, and install 
 
 1. Fork and clone this repo
 2. Then run `npm install` in your terminal
-3. Followed by `npm run start:dev`. If you using Windows, you may need to execute `npm run start-server`.
+3. Followed by `npm run start-dev`. If you using Windows, you may need to execute `npm run start-server`.
 
 ```
 
