@@ -15,7 +15,7 @@ export default function Form(props){
                   <div className = 'split right'>
                         <div className = 'centered'>
                               <form  onSubmit={props.handleSubmit} > 
-                                    <h2>Search for a Word</h2>
+                                    <h3>Search for a Word</h3>
                                     <input  name="search"  onChange={props.handleChange} type="text" placeholder = 'Search...'/>    
                                     <button  id =  'btn'  type='submit' disabled={!props.search} >Search</button>
                               </form> 

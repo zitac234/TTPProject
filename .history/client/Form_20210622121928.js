@@ -6,7 +6,7 @@ export default function Form(props){
       let  numberOfParagraph= (props.counted(props.text,  /\r?\n/) || 0)
       return (
             <div>
-                  <h1 id = 'paragraph'>Word Count Challenge</h1>
+                  <h2 id = 'paragraph'>Word Count Challenge</h2>
                   <div className = 'split left'>
                         <div  className = 'centered'>
                               <p  id = 'line'><textarea  name= 'text'   onChange={props.handleChange} id = 'textarea'  placeholder = 'max character 2500' maxLength='2500'></textarea></p>
@@ -14,8 +14,8 @@ export default function Form(props){
                   </div>
                   <div className = 'split right'>
                         <div className = 'centered'>
-                              <form  onSubmit={props.handleSubmit} > 
-                                    <h2>Search for a Word</h2>
+                              <
+                              <form  onSubmit={props.handleSubmit} >   
                                     <input  name="search"  onChange={props.handleChange} type="text" placeholder = 'Search...'/>    
                                     <button  id =  'btn'  type='submit' disabled={!props.search} >Search</button>
                               </form> 
