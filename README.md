@@ -4,6 +4,8 @@
 
 <p align="center">A website that mimics the count word function found in websites like google docs. This website was built using Javascript, React,HTML, CSS and Express.</p>
 
+---
+
 ## Table of Contents
 * [Introduction](#introduction)
 * [Technologies](#technologies)
