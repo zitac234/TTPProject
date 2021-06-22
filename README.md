@@ -10,7 +10,6 @@
 * [Introduction](#introduction)
 * [Technologies](#technologies)
 * [Setup](#setup)
-* [Features](#features)
 * [Contact](#contact)
 
 ## Introduction
