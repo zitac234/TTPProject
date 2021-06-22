@@ -59,7 +59,8 @@ input, textarea{
       margin-left: 10px;
       cursor: pointer;
 }
-#btn:hover {background-color: #ddecde}
+#btn:hover {background-color: #3e8e41}
+
 #paragraph{
       text-align: center;
 }

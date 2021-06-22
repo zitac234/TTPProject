@@ -49,8 +49,9 @@ input, textarea{
       resize: none;
 }
 #btn{
-       font-size: 15px;
-      text-align: center;
+      padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
       color:black;
       background-color: rgb(247, 245, 236);
       width:5vw;
@@ -58,8 +59,12 @@ input, textarea{
       border-radius: 10px;
       margin-left: 10px;
       cursor: pointer;
+      outline: none;
+      border: none;
+      box-shadow: 0 9px #999;
 }
-#btn:hover {background-color: #ddecde}
+#btn:hover {background-color: #3e8e41}
+
 #paragraph{
       text-align: center;
 }

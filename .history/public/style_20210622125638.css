@@ -13,7 +13,7 @@ body{
 }
 #line{
       border-right: 2px solid black;
-      padding: 10vh 5vw;
+      padding: 2vh 5vw;
 }
 .left{
       left:0;
@@ -28,38 +28,34 @@ body{
       top: 5%;
 }
 textarea {
-      width: 48vw;
-      height: 75vh;
+      width: 700px;
+      height: 650px;
       left: 5%;
       font-size: 16px;
 }
 input{
-      width: 25vw;  
-      height:5vh;
+      
+      width: 400px;  
+      height:25px;
 }
 h2{
       margin-top: 50%;
 }
 input, textarea{
-      padding: 3vh 3vw;
+      padding: 12px 20px;
       box-sizing: border-box;
-      border: 1px solid #ccc;
-      border-radius: 10px;
+      border: 2px solid #ccc;
+      border-radius: 5px;
       background-color: #f8f8f8;
       resize: none;
 }
-#btn{
-       font-size: 15px;
-      text-align: center;
+button{
       color:black;
       background-color: rgb(247, 245, 236);
-      width:5vw;
-      height: 6vh;
-      border-radius: 10px;
+      width:75px;
+      height: 30px;
       margin-left: 10px;
-      cursor: pointer;
 }
-#btn:hover {background-color: #ddecde}
 #paragraph{
       text-align: center;
 }

@@ -48,9 +48,7 @@ input, textarea{
       background-color: #f8f8f8;
       resize: none;
 }
-#btn{
-       font-size: 15px;
-      text-align: center;
+button{
       color:black;
       background-color: rgb(247, 245, 236);
       width:5vw;
@@ -58,8 +56,10 @@ input, textarea{
       border-radius: 10px;
       margin-left: 10px;
       cursor: pointer;
+      outline: none;
+      border: none;
+      box-shadow: 0 9px #999;
 }
-#btn:hover {background-color: #ddecde}
 #paragraph{
       text-align: center;
 }
