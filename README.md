@@ -20,7 +20,7 @@
 ## Technologies
 
 * Javascript
-* React
+* React Hooks
 * Node.js
 * Express.js
 * CSS
