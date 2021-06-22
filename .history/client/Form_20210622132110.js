@@ -9,7 +9,7 @@ export default function Form(props){
                   <h1 id = 'paragraph'>Word Count Challenge</h1>
                   <div className = 'split left'>
                         <div  className = 'centered'>
-                              <p  id = 'line'><textarea  name= 'text'   onChange={props.handleChange} id = 'textarea'  placeholder = 'max character 1000' maxLength='1000'></textarea></p>
+                              <p  id = 'line'><textarea  name= 'text'   onChange={props.handleChange} id = 'textarea'  placeholder = 'max character 1000' maxLength='2500'></textarea></p>
                         </div>
                   </div>
                   <div className = 'split right'>

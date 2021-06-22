@@ -279,8 +279,8 @@ function Form(props) {
     name: "text",
     onChange: props.handleChange,
     id: "textarea",
-    placeholder: "max character 2500",
-    maxLength: "2500"
+    placeholder: "max character 1000",
+    maxLength: "1000"
   })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "split right"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
