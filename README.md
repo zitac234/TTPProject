@@ -44,5 +44,5 @@ To run this project, create databases tamagenki and tamagenki-test, and install 
  
 Created by: <br />
 Nneoma Chukwukelu <br/>
-  [*Linkedin](https://www.linkedin.com/in/nneoma-chukwukelu/) [*Github](https://github.com/zitac234) [*Email](zitac234@gmail.com)
+  [Linkedin](https://www.linkedin.com/in/nneoma-chukwukelu/)  [Github](https://github.com/zitac234)  [Email](zitac234@gmail.com)
   
