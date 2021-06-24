@@ -36,6 +36,7 @@ const counts = (str,demilter)=>{
 }
 const countCharacters = (str)=>{
       let characterArray = str.split('')
+      let characterArray = textSplit.filter(character => character)
       return characterArray.length
 }
 
@@ -46,11 +47,11 @@ const searchWord = (text, search)=>{
 }
 const countBigrams = (str)=>{
       let regex = /\?|\.|!|,|:|;|[0-9]|/g
-      let newStr = str.toLowerCase().replace(regex, "")
+      let newStr = str.replace(regex, "")
       let wordsArray  = counts(newStr, ' ')[1]
       let bigramArray = []
       let bigramObj = {}
-      for(let k = 0; k < wordsArray.length-1; k++){
+      for(let k = 0; k < wordsArray.length-2; k++){
             let [currentWord, nextWord] = [wordsArray[k], wordsArray[k+1]]
             let bigram = `${currentWord} ${nextWord}`
             bigramArray.push(bigram)

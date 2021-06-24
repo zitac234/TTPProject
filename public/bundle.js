@@ -209,10 +209,7 @@ var counts = function counts(str, demilter) {
 };
 
 var countCharacters = function countCharacters(str) {
-  var textSplit = str.split('');
-  var characterArray = textSplit.filter(function (character) {
-    return character;
-  });
+  var characterArray = str.split('');
   return characterArray.length;
 };
 
@@ -226,12 +223,12 @@ var searchWord = function searchWord(text, search) {
 
 var countBigrams = function countBigrams(str) {
   var regex = /\?|\.|!|,|:|;|[0-9]|/g;
-  var newStr = str.replace(regex, "");
+  var newStr = str.toLowerCase().replace(regex, "");
   var wordsArray = counts(newStr, ' ')[1];
   var bigramArray = [];
   var bigramObj = {};
 
-  for (var k = 0; k < wordsArray.length - 2; k++) {
+  for (var k = 0; k < wordsArray.length - 1; k++) {
     var _ref = [wordsArray[k], wordsArray[k + 1]],
         currentWord = _ref[0],
         nextWord = _ref[1];

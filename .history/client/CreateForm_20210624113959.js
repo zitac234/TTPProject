@@ -56,6 +56,7 @@ const countBigrams = (str)=>{
             bigramArray.push(bigram)
       }
       bigramArray.forEach(b => bigramObj[b]=( bigramObj[b] || 0)+1)
+      console.log('bigramArray', bigramArray)
       let  values = Object.values(bigramObj )
       let result = values.reduce((a, c)=>{
             if(c >1)a++

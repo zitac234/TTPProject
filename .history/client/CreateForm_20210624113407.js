@@ -50,7 +50,8 @@ const countBigrams = (str)=>{
       let wordsArray  = counts(newStr, ' ')[1]
       let bigramArray = []
       let bigramObj = {}
-      for(let k = 0; k < wordsArray.length-1; k++){
+      
+      for(let k = 0; k < wordsArray.length-2; k++){
             let [currentWord, nextWord] = [wordsArray[k], wordsArray[k+1]]
             let bigram = `${currentWord} ${nextWord}`
             bigramArray.push(bigram)
